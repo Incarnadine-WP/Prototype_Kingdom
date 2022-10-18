@@ -1,0 +1,14 @@
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe.config
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.pdb
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csprojAssemblyReference.cache
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.CoreCompileInputs.cache
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.exe
+C:\Users\Resin\source\repos\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.pdb
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe.config
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.pdb
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.CoreCompileInputs.cache
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.exe
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.pdb
+D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.AssemblyReference.cache
