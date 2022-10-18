@@ -7,7 +7,7 @@
     <ProjectGuid>{36E9BC8B-3962-4F1B-B570-2C072EB9AC50}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Project_Kingdom</RootNamespace>
-    <AssemblyName>Project_Kingdom</AssemblyName>
+    <AssemblyName>Prototype_Kingdom</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,9 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Battle.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skeleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
