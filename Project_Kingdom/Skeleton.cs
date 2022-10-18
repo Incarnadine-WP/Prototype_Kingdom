@@ -8,10 +8,16 @@ namespace Prototype_Kingdom
 {
     class Skeleton:Enemy
     {
+        
+
         public Skeleton()
         {
-            enemyName = "Skeleton";
+            hpHero = 200;
+        }
 
+        public void Alo()
+        {
+            
         }
     }
 }

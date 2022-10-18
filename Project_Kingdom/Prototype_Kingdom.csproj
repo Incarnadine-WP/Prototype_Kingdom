@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorTheme.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Battle.cs" />
     <Compile Include="Player.cs" />
