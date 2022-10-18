@@ -1,0 +1,7 @@
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Prototype_Kingdom.csproj.CoreCompileInputs.cache
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Prototype_Kingdom.exe.config
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Prototype_Kingdom.exe
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Prototype_Kingdom.pdb
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Prototype_Kingdom.csproj.AssemblyReference.cache
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Prototype_Kingdom.exe
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Prototype_Kingdom.pdb

@@ -12,3 +12,10 @@ D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Proj
 D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.exe
 D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.pdb
 D:\Programs\unity all\VS_Projects\Project_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.AssemblyReference.cache
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.AssemblyReference.cache
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.csproj.CoreCompileInputs.cache
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.exe
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\obj\Debug\Project_Kingdom.pdb
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe.config
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.exe
+D:\Programs\GitHub\Prototype_Kingdom\Project_Kingdom\bin\Debug\Project_Kingdom.pdb
