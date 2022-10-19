@@ -8,17 +8,43 @@ namespace Prototype_Kingdom
 {
     class ColorTheme
     {
-       public static int ColorText(int dmg, ConsoleColor color)
+       public static int ColorText(int _value, ConsoleColor color)
         {
             var oldColor = Console.ForegroundColor;
 
             Console.ForegroundColor = color;
 
-            Console.Write(dmg);
+            Console.Write(_value);
 
             Console.ForegroundColor = oldColor;
 
-            return dmg;
+            return _value;
+        }
+
+        public static string ColorString(string _text, ConsoleColor color)
+        {
+            var oldColor = Console.ForegroundColor;
+
+            Console.ForegroundColor = color;
+
+            Console.Write(_text);
+
+            Console.ForegroundColor = oldColor;
+
+            return _text; 
+        }
+
+        public void ColorAll(int v, string t, ConsoleColor color)
+        {
+            var oldColor = Console.ForegroundColor;
+
+            Console.ForegroundColor = color;
+
+            Console.Write(v);
+            Console.Write(t);
+
+            Console.ForegroundColor = oldColor;
+
         }
     }
 }

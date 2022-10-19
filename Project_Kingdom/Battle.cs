@@ -10,13 +10,18 @@ namespace Prototype_Kingdom
 
         public Enemy enemy = new Enemy();
 
-
-
-        public void Fight()
+        public void FightSkeletonFB()
         {
-            player.CastFireBall(enemy.hpHero, enemy.enemyName[0]);
-            enemy.HitPlayer(player.hpEnemy, player.name);
+            player.CastFireBallSK(enemy.enemyName[0]);
+            enemy.HitPlayer(player.name);
         }
+
+        public void FightOrcFB()
+        {
+            player.CastFireBallSK(enemy.enemyName[1]);
+            enemy.HitPlayer(player.name);
+        }
+
     }
 
 }
