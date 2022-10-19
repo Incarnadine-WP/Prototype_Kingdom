@@ -8,7 +8,7 @@ namespace Prototype_Kingdom
 {
     class ColorTheme
     {
-       public static int ColorText(int _value, ConsoleColor color)
+       public static int ColorInt(int _value, ConsoleColor color)
         {
             var oldColor = Console.ForegroundColor;
 
@@ -19,6 +19,7 @@ namespace Prototype_Kingdom
             Console.ForegroundColor = oldColor;
 
             return _value;
+
         }
 
         public static string ColorString(string _text, ConsoleColor color)

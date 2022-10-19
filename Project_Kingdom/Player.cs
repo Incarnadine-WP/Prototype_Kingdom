@@ -14,9 +14,9 @@ namespace Prototype_Kingdom
         public string name;
         public int [] hpEnemy = { 200, 700, 1000 };
 
-        string fireBall = "Fire Ball ";
+        string [] spell = { "Fire Ball", "Chain Lighting" };
         string enemyName;
-        int [] mpHero = { 200, 300, 400 };
+        public int [] mpHero = { 200, 300 };
 
 
         Random ran = new Random();
@@ -28,53 +28,147 @@ namespace Prototype_Kingdom
             if (mpHero[0] >= 66)
             {
                 int mp = -65;
-                int dmg = ran.Next(50, 80);
+                int dmg = ran.Next(55, 80);
 
                 hpEnemy[0] -= dmg;
 
-                Console.Write($"{name} cast { fireBall} ");
-                ColorTheme.ColorText(mp, ConsoleColor.Blue);
-                ColorTheme.ColorString(" /300mp)", ConsoleColor.Blue);
+                Console.Write($"{name} cast {spell[0]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
                 Console.Write ($"at the {_enemyName} and dealt ");
-                ColorTheme.ColorText(dmg, ConsoleColor.DarkYellow);
-                Console.Write(" dmg. ");
-
-                color.ColorAll(dmg, " Alo ", ConsoleColor.Red);
-
+                color.ColorAll(dmg, "dmg. ", ConsoleColor.DarkYellow);
                 Console.Write("Current hp: ");
-                ColorTheme.ColorText(hpEnemy[0], ConsoleColor.Green);
-
-                color.ColorAll(hpEnemy[0], " hp ", ConsoleColor.Red);
+                color.ColorAll(hpEnemy[0], "/200", ConsoleColor.Green);
 
                 mpHero[0] += mp;
             }
             else
             {
-                Console.WriteLine("You dont have enough mana! " + mpHero[1]);
-                ColorTheme.ColorText(mpHero[0], ConsoleColor.Blue);
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
             }
 
         }
+
+        public void LightingStrikeSK(string _enemyName)
+        {
+            enemyName = _enemyName;
+
+
+            if (mpHero[0] >= 76)
+            {
+                int dmg = ran.Next(25, 35);
+                int dmg2 = ran.Next(25, 35);
+                int dmg3 = ran.Next(25, 35);
+
+                int mp = -75;
+
+                hpEnemy[0] -= dmg + dmg +dmg;
+
+                Console.Write($"{name} cast {spell[1]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
+                Console.Write($"at the {_enemyName} and dealt ");
+                color.ColorAll(dmg, " + ", ConsoleColor.Cyan);
+                color.ColorAll(dmg2, " + ", ConsoleColor.Cyan);
+                color.ColorAll(dmg3, " dmg. ", ConsoleColor.Cyan);
+
+                Console.Write("Current hp: ");
+                color.ColorAll(hpEnemy[0], "/200", ConsoleColor.Green);
+
+                mpHero[0] += mp;
+            }
+            else 
+            {
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
+            }
+
+        }
+
+        public void CastFireBallOrc(string _enemyName)
+        {
+            enemyName = _enemyName;
+
+            if (mpHero[0] >= 66)
+            {
+                int mp = -65;
+                int dmg = ran.Next(50, 80);
+
+                hpEnemy[1] -= dmg;
+
+                Console.Write($"{name} cast {spell[0]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
+                Console.Write($"at the {_enemyName} and dealt ");
+                color.ColorAll(dmg, "dmg. ", ConsoleColor.DarkYellow);
+                Console.Write("Current hp: ");
+                color.ColorAll(hpEnemy[1], "/200", ConsoleColor.Green);
+
+                mpHero[0] += mp;
+            }
+            else
+            {
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
+            }
+
+        }
+
         public void LightingStrikeOrc(string _enemyName)
         {
             enemyName = _enemyName;
 
-            if (mpHero[1] >= 76)
+
+            if (mpHero[0] >= 76)
             {
                 int dmg = ran.Next(25, 35);
-                hpEnemy[1] -= dmg;
-                Console.Write(name + " cast " + fireBall +" (" +mpHero[1]+ ") " + " at the " + _enemyName + " and dealt ");
-                ColorTheme.ColorText(dmg, ConsoleColor.Red);
-                ColorTheme.ColorText(mpHero[1], ConsoleColor.Blue);
-                Console.Write(" dmg. ");
+                int dmg2 = ran.Next(25, 35);
+                int dmg3 = ran.Next(25, 35);
+
+                int mp = -75;
+
+                hpEnemy[1] -= dmg + dmg + dmg;
+
+                Console.Write($"{name} cast {spell[1]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
+                Console.Write($"at the {_enemyName} and dealt ");
+                color.ColorAll(dmg, " + ", ConsoleColor.Cyan);
+                color.ColorAll(dmg2, " + ", ConsoleColor.Cyan);
+                color.ColorAll(dmg3, " dmg. ", ConsoleColor.Cyan);
 
                 Console.Write("Current hp: ");
-                ColorTheme.ColorText(hpEnemy[1], ConsoleColor.Green);
+                color.ColorAll(hpEnemy[1], "/200", ConsoleColor.Green);
 
-                mpHero[1] -= 75;
+                mpHero[0] += mp;
             }
-            else Console.Write("You dont have enough mana! ");
-            
+            else
+            {
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
+            }
+
+        }
+
+        public int RegenMPlvlOne(int mp)
+        {
+             mpHero[0] = mp;
+             int regenMP = 200 - mp;
+             mpHero[0] += regenMP;
+
+             Console.Write("You regen: ");
+
+             return ColorTheme.ColorInt(regenMP, ConsoleColor.Blue);
+
+        }
+
+        public int RegenMPlvlTwo(int mp)
+        {
+            mpHero[1] = mp;
+            int regenMP = 200 - mp;
+            mpHero[1] += regenMP;
+
+            Console.Write("You regen: ");
+
+            return ColorTheme.ColorInt(regenMP, ConsoleColor.Blue);
+
         }
 
     }
