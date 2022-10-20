@@ -11,10 +11,11 @@ namespace Prototype_Kingdom
     {
         ColorTheme color = new ColorTheme();
 
-        public string name;
-        public int [] hpEnemy = { 200, 700, 1000 };
 
-        string [] spell = { "Fire Ball", "Chain Lighting" };
+        public string name;
+        public int [] hpEnemy = { 200, 500, 750 };
+
+        public string [] spell = { "Fire Ball", "Chain Lighting","Regen MP","Heal" };
         string enemyName;
         public int [] mpHero = { 200, 300 };
 
@@ -100,14 +101,14 @@ namespace Prototype_Kingdom
                 Console.Write($"at the {_enemyName} and dealt ");
                 color.ColorAll(dmg, "dmg. ", ConsoleColor.DarkYellow);
                 Console.Write("Current hp: ");
-                color.ColorAll(hpEnemy[1], "/200", ConsoleColor.Green);
+                color.ColorAll(hpEnemy[1], "/500", ConsoleColor.Green);
 
                 mpHero[0] += mp;
             }
             else
             {
                 Console.Write("You dont have enough mana! ");
-                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
+                color.ColorAll(mpHero[0], "/300", ConsoleColor.Blue);
             }
 
         }
@@ -116,8 +117,7 @@ namespace Prototype_Kingdom
         {
             enemyName = _enemyName;
 
-
-            if (mpHero[0] >= 76)
+            if (mpHero[1] >= 76)
             {
                 int dmg = ran.Next(25, 35);
                 int dmg2 = ran.Next(25, 35);
@@ -135,14 +135,14 @@ namespace Prototype_Kingdom
                 color.ColorAll(dmg3, " dmg. ", ConsoleColor.Cyan);
 
                 Console.Write("Current hp: ");
-                color.ColorAll(hpEnemy[1], "/200", ConsoleColor.Green);
+                color.ColorAll(hpEnemy[1], "/500", ConsoleColor.Green);
 
-                mpHero[0] += mp;
+                mpHero[1] += mp;
             }
             else
             {
                 Console.Write("You dont have enough mana! ");
-                color.ColorAll(mpHero[0], "/200", ConsoleColor.Blue);
+                color.ColorAll(mpHero[1], "/300", ConsoleColor.Blue);
             }
 
         }
@@ -162,14 +162,15 @@ namespace Prototype_Kingdom
         public int RegenMPlvlTwo(int mp)
         {
             mpHero[1] = mp;
-            int regenMP = 200 - mp;
+            int regenMP = 300 - mp;
             mpHero[1] += regenMP;
 
             Console.Write("You regen: ");
 
             return ColorTheme.ColorInt(regenMP, ConsoleColor.Blue);
-
         }
+
+       
 
     }
 

@@ -27,6 +27,60 @@ namespace Prototype_Kingdom
             color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
         }
 
+        public void HealSkeleton()
+        {
+            if (player.mpHero[0] >= 35)
+            {
+                int mp = -35;
+                player.mpHero[0] += mp;
+                Console.Write($"{player.name} cast {player.spell[3]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
+
+                enemy.Heal(enemy.hpHero);
+                ColorTheme.ColorString("hp", ConsoleColor.Green);
+                enemy.SkeletonHit(player.name);
+                Console.Write(" Current mp: ");
+                color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
+            }
+            else
+            {
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
+            }
+        }
+
+        public void HealOrc()
+        {
+            if (player.mpHero[0] >= 35)
+            {
+                int mp = -35;
+                player.mpHero[1] += mp;
+                Console.Write($"{player.name} cast {player.spell[3]} ");
+                color.ColorAll(mp, "mp ", ConsoleColor.Blue);
+
+                enemy.Heal(enemy.hpHero);
+                ColorTheme.ColorString("hp", ConsoleColor.Green);
+                enemy.SkeletonHit(player.name);
+                Console.Write(" Current mp: ");
+                color.ColorAll(player.mpHero[1], "/300", ConsoleColor.Blue);
+            }
+            else
+            {
+                Console.Write("You dont have enough mana! ");
+                color.ColorAll(player.mpHero[1], "/300", ConsoleColor.Blue);
+            }
+
+        }
+
+        public void RegenManaSkelet()
+        {
+            player.RegenMPlvlOne(player.mpHero[0]);
+            ColorTheme.ColorString("mp", ConsoleColor.Blue);
+            enemy.SkeletonHit(player.name);
+            Console.Write(" Current mp: ");
+            color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
+        }
+
         public void FightOrcFB()
         {
             player.CastFireBallOrc(enemy.enemyName[1]);
@@ -40,17 +94,28 @@ namespace Prototype_Kingdom
             player.LightingStrikeOrc(enemy.enemyName[1]);
             enemy.OrcHit(player.name);
             Console.Write(" Current mp: ");
-            color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
+            color.ColorAll(player.mpHero[1], "/200", ConsoleColor.Blue);
         }
 
-        public void RegenManaSkelet()
+
+        public void RegenManaOrc()
         {
-            player.RegenMPlvlOne(player.mpHero[0]);
+            player.RegenMPlvlTwo(player.mpHero[1]);
             ColorTheme.ColorString("mp", ConsoleColor.Blue);
-            enemy.SkeletonHit(player.name);
+            enemy.OrcHit(player.name);
             Console.Write(" Current mp: ");
-            color.ColorAll(player.mpHero[0], "/200", ConsoleColor.Blue);
+            color.ColorAll(player.mpHero[1], "/300", ConsoleColor.Blue);
         }
+
+        public void RegenManaDragon()
+        {
+            player.RegenMPlvlTwo(player.mpHero[1]);
+            ColorTheme.ColorString("mp", ConsoleColor.Blue);
+            // enemy.SkeletonHit(player.name);
+            Console.Write(" Current mp: ");
+            color.ColorAll(player.mpHero[1], "/300", ConsoleColor.Blue);
+        }
+
 
     }
 
