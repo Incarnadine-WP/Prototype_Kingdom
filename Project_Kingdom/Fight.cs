@@ -11,14 +11,14 @@ namespace Prototype_Kingdom
 
         protected string option;
 
-        int round = 1;
+        public int round = 1;
 
         public void SkeletFight()
         {
             while (player.hpEnemy[0] > 0 && enemy.hpHero[0] > 0)
             {
                 Console.WriteLine("\n==================== ROUND: " + round + " ====================\n");
-                Console.Write("Cast:\n\t1)Fire Ball\t\t3)Heal\n\t2)Regen MP");
+                Console.Write("Cast:\n\t1)Fire Ball(65mp)\t\t3)Heal(35mp)\n\t2)Regen MP");
                 Console.WriteLine();
 
                 int num = 0;
@@ -54,6 +54,7 @@ namespace Prototype_Kingdom
                 }
                 round++;
             }
+            
 
         }
 
@@ -61,7 +62,8 @@ namespace Prototype_Kingdom
         {
             while (player.hpEnemy[1] > 250 && enemy.hpHero[0] > 0)
             {
-                Console.Write("Cast:\n\t1)Fire Ball\t\t4)Heal\n\t2)Chain Lighting\t3)Regen MP");
+                Console.WriteLine("\n==================== ROUND: " + round + " ====================\n");
+                Console.Write("Cast:\n\t1)Fire Ball(65mp)\t\t3)Regen MP\n\t2)Chain Lighting(75mp)\t\t4)Heal(35mp)");
                 Console.WriteLine();
 
                 int num = 0;
@@ -98,14 +100,29 @@ namespace Prototype_Kingdom
                         round--;
                         break;
                 }
+                round++;
             }
+            if (player.hpEnemy[1] >= 0 && enemy.hpHero[0] <= 0)
+            {
+                ColorTheme.ColorString("\nYou died...\n", ConsoleColor.Magenta);
+
+                Environment.Exit(0);
+
+            }
+
+            OrcFightRage();
         }
 
         public void OrcFightRage()
         {
+            ColorTheme.ColorString("\nORC GOING TO RAGE!", ConsoleColor.Red);
+            Console.WriteLine(" Be careful his damage increased.");
+            Console.ReadKey();
+
             while (player.hpEnemy[1] > 0 && enemy.hpHero[0] > 0)
             {
-                Console.Write("Cast:\n\t1)Fire Ball\t\t3)Regen MP\n\t2)Chain Lighting\t4)Heal");
+                Console.WriteLine("\n==================== ROUND: " + round + " ====================\n");
+                Console.Write("Cast:\n\t1)Fire Ball(65mp)\t\t3)Regen MP\n\t2)Chain Lighting(75mp)\t\t4)Heal(35mp)");
                 Console.WriteLine();
 
                 int num = 0;
@@ -142,14 +159,17 @@ namespace Prototype_Kingdom
                         round--;
                         break;
                 }
+                round++;
             }
+            
         }
 
         public void DragonFightOne()
         {
-            while (player.hpEnemy[2] > 0 && enemy.hpHero[1] > 0)
+            while (player.hpEnemy[2] > 1 && enemy.hpHero[1] > 0)
             {
-                Console.Write("Cast:\n\t1)Fire Ball\t\t3)Regen MP\n\t2)Chain Lighting\t4)Heal");
+                Console.WriteLine("\n==================== ROUND: " + round + " ====================\n");
+                Console.Write("Cast:\n\t1)Fire Ball(65mp)\t\t3)Regen MP\n\t2)Chain Lighting(75mp)\t\t4)Heal(45mp)");
                 Console.WriteLine();
 
                 int num = 0;
@@ -186,14 +206,39 @@ namespace Prototype_Kingdom
                         round--;
                         break;
                 }
+
+                round++;
             }
+
+            if (player.hpEnemy[2] > 0 && enemy.hpHero[1] <= 0)
+            {
+                ColorTheme.ColorString("\nYou died...\n", ConsoleColor.Magenta);
+
+                Environment.Exit(0);
+            }
+            else if(player.hpEnemy[2] <= 1 && enemy.hpHero[1] > 0)
+            {
+                player.hpEnemy[2] = 700;
+            }
+
+            DragonFightTwo();
         }
 
         public void DragonFightTwo()
         {
+            Console.WriteLine("\nGreat! you dealt the death blow to the dragon");
+            Console.ReadKey();
+            Console.WriteLine("But something went wrong");
+            Console.ReadKey();
+            Console.WriteLine("The dragon fell to the ground and then arise like a Phoenix");
+            Console.ReadKey();
+            Console.WriteLine("The battle is not over yet!");
+            Console.ReadKey();
+
             while (player.hpEnemy[2] > 0 && enemy.hpHero[1] > 0)
             {
-                Console.Write("Cast:\n\t1)Fire Ball\t\t3)Regen MP\n\t2)Chain Lighting\t4)Heal");
+                Console.WriteLine("\n==================== ROUND: " + round + " ====================\n");
+                Console.Write("Cast:\n\t1)Fire Ball(65mp)\t\t3)Regen MP\n\t2)Chain Lighting(75mp)\t\t4)Heal(45mp)");
                 Console.WriteLine();
 
                 int num = 0;
@@ -230,6 +275,7 @@ namespace Prototype_Kingdom
                         round--;
                         break;
                 }
+                round++;
             }
         }
 

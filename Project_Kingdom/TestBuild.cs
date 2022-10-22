@@ -11,11 +11,20 @@ namespace Prototype_Kingdom
 
         static void Main(string[] args)
         {
-            Fight fight = new Fight();
-            Narrative narrative = new Narrative();
-
+            /* Narrative narrative = new Narrative();
+            
             narrative.Intro();
-            fight.SkeletFight();
+            narrative.player.name = Console.ReadLine();
+            narrative.Intro2();
+            narrative.SkeletFight();
+            narrative.EndSkeletFight();
+            narrative.round = 1;
+            narrative.OrcFight();
+            narrative.EndOrcFight();
+            narrative.round = 1;
+            narrative.Intro3();
+            narrative.DragonFightOne();
+            narrative.EndDragonFight(); */
 
         }
 

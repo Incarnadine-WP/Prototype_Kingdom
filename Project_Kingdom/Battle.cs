@@ -84,7 +84,7 @@ namespace Prototype_Kingdom
 
         public void HealOrcRage()
         {
-            if (player.mpHero[0] >= 35)
+            if (player.mpHero[1] >= 35)
             {
                 int mp = -35;
                 player.mpHero[1] += mp;
