@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Prototype_Kingdom.GameStart</StartupObject>
+    <StartupObject>Prototype_Kingdom.TestBuild</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +53,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestBuild.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

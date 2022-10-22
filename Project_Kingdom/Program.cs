@@ -8,33 +8,41 @@ namespace Prototype_Kingdom
 
    class GameStart
     {
+
         static void Main(string[] args)
         {
             Console.Title = "Kingdom";
 
             Fight fight = new Fight();
+            Narrative narrative = new Narrative();
 
-            Console.WriteLine("Hello hero, what is you name?");
-            fight.player.name = Console.ReadLine();
+           // Console.WriteLine("Hello hero, what is you name?");
+           // fight.player.name = Console.ReadLine();
             
             fight.SkeletFight();
-      
-            if (fight.player.hpEnemy[0] > 0 && fight.enemy.hpHero < 0)
-            {
-                ColorTheme.ColorString("You dead...", ConsoleColor.Magenta);
-            }
-            else 
-            {
-                Console.WriteLine("You win");
-            }
 
+            narrative.EndSkeletFight();
+      
             Console.WriteLine("Before you had time to rest, an angry orc jumped out at you!");
 
             fight.OrcFight();
 
-            if (fight.player.hpEnemy[1] > 0 && fight.enemy.hpHero < 0)
+            if (fight.player.hpEnemy[1] > 0 && fight.enemy.hpHero[0] < 0)
             {
                 ColorTheme.ColorString("You dead...", ConsoleColor.Magenta);
+            }
+            
+            Console.WriteLine("ORC RAGE!");
+
+            fight.OrcFightRage();
+
+            if (fight.player.hpEnemy[1] > 0 && fight.enemy.hpHero[0] < 0)
+            {
+                ColorTheme.ColorString("You dead...", ConsoleColor.Magenta);
+            }
+            else if(fight.player.hpEnemy[1] < 0 && fight.enemy.hpHero[0] < 0)
+            {
+                ColorTheme.ColorString("At the cost of your life you dealt with the Orc, this is where your journey ends... ", ConsoleColor.Magenta);
             }
             else
             {
