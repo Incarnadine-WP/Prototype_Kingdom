@@ -135,7 +135,7 @@ namespace Prototype_Kingdom
 
             if (hpHero[1] > 300)
             {
-                hpHero[0] = 300;
+                hpHero[1] = 300;
             }
 
             Console.Write("You healed for: ");
